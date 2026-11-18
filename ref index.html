@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="References and dataset sources for the Pixels to Predictions PCam histopathology model comparison poster.">
+  <title>Pixels to Predictions | References</title>
+  <style>
+    :root {
+      --navy: #174A78;
+      --blue: #4682B4;
+      --pale: #EAF2F8;
+      --ink: #233342;
+      --muted: #5E6B75;
+      --line: #D7E2EA;
+      --white: #FFFFFF;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; background: #F5F8FB; color: var(--ink);
+      font-family: Georgia, "Times New Roman", serif; line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(135deg, var(--navy), #2D6F9F);
+      color: white; padding: 3.2rem 1.25rem 2.8rem; text-align: center;
+    }
+    header .eyebrow {
+      text-transform: uppercase; letter-spacing: .16em; font: 700 .78rem Arial, sans-serif;
+      opacity: .85;
+    }
+    h1 { margin: .6rem auto .4rem; font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.15; }
+    header p { max-width: 680px; margin: .8rem auto 0; font-size: 1.08rem; opacity: .93; }
+    main { width: min(900px, calc(100% - 2rem)); margin: 2rem auto 4rem; }
+    .intro { margin: 0 0 1.5rem; color: var(--muted); }
+    section {
+      background: var(--white); border: 1px solid var(--line); border-radius: 16px;
+      padding: 1.4rem 1.5rem; margin: 1rem 0; box-shadow: 0 5px 18px rgba(23,74,120,.05);
+    }
+    h2 {
+      color: var(--navy); font-size: 1.28rem; margin: 0 0 .9rem;
+      border-bottom: 2px solid var(--pale); padding-bottom: .55rem;
+    }
+    .ref { margin: 1rem 0 1.2rem; }
+    .ref:last-child { margin-bottom: 0; }
+    .ref-title { font-weight: bold; }
+    .meta { color: var(--muted); font-size: .96rem; }
+    a { color: var(--blue); overflow-wrap: anywhere; }
+    a:hover { color: var(--navy); }
+    .tag {
+      display: inline-block; margin: 0 0 .55rem; padding: .18rem .58rem;
+      background: var(--pale); color: var(--navy); border-radius: 999px;
+      font: 700 .72rem Arial, sans-serif; letter-spacing: .04em; text-transform: uppercase;
+    }
+    footer { text-align: center; color: var(--muted); font: .86rem Arial, sans-serif; padding: 0 1rem 2.5rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="eyebrow">Pixels to Predictions</div>
+    <h1>References &amp; Data Sources</h1>
+    <p>PCam histopathology image classification: CNN, Vision Transformer, and hybrid CNN–Transformer methods.</p>
+  </header>
+  <main>
+    <p class="intro">The sources below support the dataset and model architectures evaluated in this project. Select a title or DOI to open the original source.</p>
+
+    <section>
+      <span class="tag">Dataset</span>
+      <h2>PatchCamelyon (PCam)</h2>
+      <div class="ref">
+        <div class="ref-title">PatchCamelyon (PCam) dataset — Hugging Face</div>
+        <div class="meta">Dataset distribution used for the project.</div>
+        <a href="https://huggingface.co/datasets/zacharielegault/PatchCamelyon" target="_blank" rel="noopener">Open PCam dataset on Hugging Face</a>
+      </div>
+      <div class="ref">
+        <div class="ref-title">Veeling, B. S., Linmans, J., Winkens, J., Cohen, T., &amp; Welling, M. (2018). Rotation Equivariant CNNs for Digital Pathology.</div>
+        <div class="meta">MICCAI 2018, pp. 210–218.</div>
+        <a href="https://arxiv.org/abs/1806.03962" target="_blank" rel="noopener">Read paper on arXiv</a>
+      </div>
+      <div class="ref">
+        <div class="ref-title">Ehteshami Bejnordi, B., et al. (2017). Diagnostic Assessment of Deep Learning Algorithms for Detection of Lymph Node Metastases in Women With Breast Cancer.</div>
+        <div class="meta">JAMA, 318(22), 2199–2210.</div>
+        <a href="https://doi.org/10.1001/jama.2017.14585" target="_blank" rel="noopener">https://doi.org/10.1001/jama.2017.14585</a>
+      </div>
+    </section>
+
+    <section>
+      <span class="tag">CNN / ResNet</span>
+      <h2>Residual Convolutional Neural Network</h2>
+      <div class="ref">
+        <div class="ref-title">Breast cancer detection from histopathology images using modified residual neural networks.</div>
+        <div class="meta">Biocybernetics and Biomedical Engineering, 41(4), 1272–1287 (2021).</div>
+        <a href="https://doi.org/10.1016/j.bbe.2021.08.011" target="_blank" rel="noopener">https://doi.org/10.1016/j.bbe.2021.08.011</a>
+      </div>
+    </section>
+
+    <section>
+      <span class="tag">Vision Transformer</span>
+      <h2>Transformer-Based Histopathology Classification</h2>
+      <div class="ref">
+        <div class="ref-title">Baroni, G. L., Rasotto, L., Roitero, K., Tulisso, A., Di Loreto, C., &amp; Della Mea, V. (2024). Optimizing Vision Transformers for Histopathology: Pretraining and Normalization in Breast Cancer Classification.</div>
+        <div class="meta">Journal of Imaging, 10(5), 108.</div>
+        <a href="https://doi.org/10.3390/jimaging10050108" target="_blank" rel="noopener">https://doi.org/10.3390/jimaging10050108</a>
+      </div>
+    </section>
+
+    <section>
+      <span class="tag">CNN–Transformer Hybrid</span>
+      <h2>StoHisNet</h2>
+      <div class="ref">
+        <div class="ref-title">Fu, B., Zhang, M., He, J., Cao, Y., Guo, Y., &amp; Wang, R. (2022). StoHisNet: A hybrid multi-classification model with CNN and Transformer for gastric pathology images.</div>
+        <div class="meta">Computer Methods and Programs in Biomedicine, 221, 106924.</div>
+        <a href="https://doi.org/10.1016/j.cmpb.2022.106924" target="_blank" rel="noopener">https://doi.org/10.1016/j.cmpb.2022.106924</a>
+      </div>
+    </section>
+  </main>
+  <footer>Pixels to Predictions · PCam Model Comparison</footer>
+</body>
+</html>
